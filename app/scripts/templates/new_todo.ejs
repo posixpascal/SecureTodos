@@ -1,0 +1,27 @@
+<h3>New Todo</h3>
+<hr />
+
+<form method="post" action="/todo/new">
+  <div class="form-group">
+    <label for="title">Enter a title</label>
+    <input type="email" class="form-control" id="title" placeholder="Enter a short title">
+  </div>
+  <div class="form-group">
+    <label for="description">(Optional) Enter a short description</label>
+   <textarea class="form-control" placeholder="Describe your todo" name="description">
+   	
+   </textarea>
+  </div>
+  
+  <div class="checkbox">
+    <label>
+      <input type="checkbox"> Public
+    </label><br/>
+    <label>
+      <input type="checkbox" checked> Store in my browser only
+    </label>
+  </div>
+  
+  <button type="submit" class="btn btn-primary">Create Todo &amp; Encrypt</button> <button type="button" class="btn btn-danger">Reset SHA3-Key</button>
+
+</form>
