@@ -27,9 +27,13 @@ h1 .label {
 		text-decoration: none;
 	}
 }
+.fold {
+	display: none;
+}
 
 .container {
 	padding: 0;
+	padding-bottom: 20px;
 	border-radius: 5px;
 	box-shadow: 0 0 5px rgba(0,0,0,.5);
 	.heading {
@@ -46,7 +50,7 @@ h1 .label {
 		color: #333;
 		text-shadow: 1px 1px 0 #fff;
 		text-align:center;
-		border-bottom: 1px solid 888;
+		border-bottom: 1px solid #888;
 		h2 {
 			padding: 0;
 			margin: 0;

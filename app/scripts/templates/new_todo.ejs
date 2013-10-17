@@ -1,4 +1,4 @@
-<h3>New Todo</h3>
+<h3>New encrypted single Todo</h3>
 <hr />
 
 <form method="post" action="/todo/new">
@@ -8,20 +8,61 @@
   </div>
   <div class="form-group">
     <label for="description">(Optional) Enter a short description</label>
-   <textarea class="form-control" placeholder="Describe your todo" name="description">
-   	
-   </textarea>
+   <textarea class="form-control" rows="8" placeholder="Describe your todo" name="description"></textarea>
   </div>
   
-  <div class="checkbox">
-    <label>
-      <input type="checkbox"> Public
-    </label><br/>
-    <label>
-      <input type="checkbox" checked> Store in my browser only
-    </label>
+  <hr />
+  <h5>Settings</h5>
+  <button type="button" class='btn btn-sm btn-default' data-fold='settings'>Storage</button>
+  <button type="button" class='btn btn-sm btn-default' data-fold='encryption'>Encryption</button>
+  <button type="button" class='btn btn-sm btn-default' data-fold='tags'>Tags</button>
+  <br/><br/>
+  
+  <div class='fold settings well'>
+	<center><div class="btn-group" data-toggle="buttons">
+	  <label class="btn btn-primary">
+	    <input type="checkbox"> Server
+	  </label>
+	  <label class="btn btn-primary">
+	    <input type="checkbox"> Browser
+	  </label>
+	  <label class="btn btn-primary">
+	    <input type="checkbox"> Both
+	  </label>
+	</div>
+ </center>
   </div>
   
-  <button type="submit" class="btn btn-primary">Create Todo &amp; Encrypt</button> <button type="button" class="btn btn-danger">Reset SHA3-Key</button>
+  
+  
+  <div class='fold encryption well'>
+	<center><div class="btn-group" data-toggle="buttons">
+	  <label class="btn btn-primary">
+	    <input type="checkbox"> SHA256
+	  </label>
+	  <label class="btn btn-primary">
+	    <input type="checkbox"> SHA512
+	  </label>
+	  <label class="btn btn-primary">
+	    <input type="checkbox"> SHA512 + Password
+	  </label>
+	</div>
+ </center>
+  </div>
+
+     <div class='fold tags well'>
+
+   	 		<textarea rows="8" class="form-control" name="tags"></textarea>
+			<span class="help-block">Comma seperated list of tags. <b>Attention! These are stored non-encrypted</b></span>
+
+   
+     </div>
+	
+  
+  
+	<hr/>
+
+  <button type="submit" class="btn  btn-lg btn-primary col-xs-6">Save &amp; Encrypt</button>
+  <button type="button" class="btn  btn-lg col-xs-4 pull-right btn-danger">Reset SHA-Keys</button>
 
 </form>

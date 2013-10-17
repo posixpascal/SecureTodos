@@ -2,10 +2,18 @@
 
 class SecureTodos.Routers.TodoRouter extends Backbone.Router
 	routes:
+		"": "index"
+		"/": "index"
+		"/home": "index"
+		
 		"todo/new": "new_todo"
 		"todo/:uuid": "view_todo"
 		"search": "search_todo"
 		"search/:query": "search_todo_by_query"
+		
+		
+	index: ->
+		new SecureTodos.Views.IndexView().render()
 		
 	view_todo: (uuid) ->
 		todoView = new SecureTodos.Views.TodoView

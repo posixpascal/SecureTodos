@@ -26,3 +26,5 @@ class SecureTodos.Views.SearchTodoView extends SecureTodos.Views.TodoView
 
 
 	
+class SecureTodos.Views.IndexView extends SecureTodos.Views.TodoView
+	template: JST["app/scripts/templates/index.ejs"]

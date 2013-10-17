@@ -76,5 +76,8 @@ $ ->
   		generate_token: true
   
   
+	$("body").on 'click', "[data-fold]", ->
+		$(".#{$(this).data("fold")}").fadeToggle()
+		
   
   
